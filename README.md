@@ -33,11 +33,11 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose up -d
 docker exec -it bitcoind /bin/bash
 
-# ruesct yazdığım yerlere kendi bilgilerinizi giriniz. (totalde 3 kısım)
-bitcoin-cli -testnet4 -rpcuser=ruesct -rpcpassword=ruesct -rpcport=5000 createwallet ruesct
+# ruesct yazdığım yere kendi bilgilerinizi giriniz. 
+bitcoin-cli -testnet4 -rpcuser=demo -rpcpassword=demo -rpcport=5000 createwallet ruesct
 
-# burada 2 kısma giriyoruz bilgilerimizi ve kaydediyoruz adresi.
-bitcoin-cli -testnet4 -rpcuser=ruesct -rpcpassword=ruesct -rpcport=5000 getnewaddress
+# burada gelen adresi kaydediyoruz adresi.
+bitcoin-cli -testnet4 -rpcuser=demo -rpcpassword=demo -rpcport=5000 getnewaddress
 ```
 
 > Sunucumuza çık gir yapalım.
@@ -50,10 +50,10 @@ chmod +x rbo_worker
 
 # bu dosayaya girelim
 nano docker-compose.yml
-# altta verdiğim komutu düzenleyerek içine yapıştırın.
+# altta verdiğim komutu değiştirmeden içine yapıştırın.
 ```
 
-> user ve password değişmeniz simdilik yeterli.
+
 
 ```console
 version: '3'
@@ -88,8 +88,8 @@ docker-compose up -d
 # screen açıyoruz
 screen -S Rainbow
 
-# gerekli 2 bilgiyi dolduruyoruz
-./rbo_worker worker --rpc http://127.0.0.1:5000 --password ruesct --username ruesct --start_height 42000
+# direk yapıştırarak çalıştıralım
+./rbo_worker worker --rpc http://127.0.0.1:5000 --password demo --username demo --start_height 42000
 
 # CTRL A D ÇIKIŞ
 ```
