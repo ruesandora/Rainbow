@@ -89,7 +89,7 @@ docker-compose up -d
 screen -S Rainbow
 
 # gerekli 2 bilgiyi dolduruyoruz
-./rbo_worker worker --rpc http://127.0.0.1:5000 --password ruesct --username ruesct --start_height 42000
+./rbo_worker worker --rpc http://127.0.0.1:5000 --password demo --username demo --start_height 42000
 
 # CTRL A D ÇIKIŞ
 ```
