@@ -1,7 +1,6 @@
 Worker çalıştırdığımız ekran içerisine giriyoruz
 ```
 screen -r Rainbow
-
 ```
 CTRL + C ile logları durduruyoruz
 
@@ -25,9 +24,7 @@ Gerekli dosyaları bilgisayarınıza yedekleyin
 
 ```
 nano identity/identity.json
-
 ```
 ```
 nano identity/private_key.pem
-
 ```
